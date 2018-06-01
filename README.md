@@ -7,4 +7,5 @@ This fetches all your mails from a particular newsletter(probably an email) and 
 Well, I am an avid reader of my favourite newsletters and I would not like to miss any of my newsletters that brings in interesting contents adding a little joy in this prosaic life. It helps me sort and allows me to read in my domain of interest. 
 
 ### TODO
-- Output to some fancy pdf files
+- Output to some fancy pdf files(for better readability)
+- Extract images and add text hyperlinks rather than whole links in the file
