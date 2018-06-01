@@ -15,7 +15,8 @@ mail.login(EMAIL_ACCOUNT, PASSWORD)
 
 mail.select('inbox') # You can select any mailbox here
 
-result, data = mail.uid('search', None, '(FROM "newsletters@technologyreview.com")')  # you could filter using the IMAP rules here (check http://www.example-code.com/csharp/imap-search-critera.asp)
+# Put up your newsletter email address here
+result, data = mail.uid('search', None, '(FROM "EMAIL ADDRESS HERE")')  # you could filter using the IMAP rules here (check http://www.example-code.com/csharp/imap-search-critera.asp)
 
 i = len(data[0].split())
 
@@ -40,9 +41,10 @@ for x in range(i):
     for part in email_message.walk():
         if part.get_content_type() == "text/plain":
             body = part.get_payload(decode=True)
-            file_name = subject + ".pdf" 
+            file_name = str(x) + str(".") + subject[14:] + ".txt" 
+            print("Writing the file " + file_name + " in your current directory. ")
             output_file = open(file_name, 'w')
-            output_file.write("From: %s\nTo: %s\nDate: %s\nSubject: %s\n\nBody: \n\n%s" %(email_from, email_to,local_message_date, subject, body.decode('utf-8',errors='ignore'))) # We ignore any unicode/decode errors we might encounter
+            output_file.write("Body: \n\n%s" %(body.decode('utf-8',errors='ignore'))) # We ignore any unicode/decode errors we might encounter
             output_file.close()
         else:
             continue
