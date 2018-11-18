@@ -1,5 +1,7 @@
 # Gmail Newsletter Parser
 
+[![Join the chat at https://gitter.im/Gmail__Newsletter__Parser/Lobby](https://badges.gitter.im/Gmail__Newsletter__Parser/Lobby.svg)](https://gitter.im/Gmail__Newsletter__Parser/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## How this works?
 This fetches all your mails from a particular newsletter(probably an email) and stores them as text file.
 
